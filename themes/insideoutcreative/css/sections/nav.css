@@ -32,12 +32,22 @@ ul.menu>li.menu-item-has-children {
 }
 
 ul.menu>li>a {
-    padding: 0px 9px;
-    /* color: white; */
+    padding: 0px 45px;
+    color: #737272;
+    text-decoration: unset;
     /* font-weight: 200; */
     /* text-transform: uppercase; */
     /* font-size: 14px;
     font-family: unset; */
+}
+
+ul.menu>li>a {
+    border-left: 1px solid var(--accent-secondary);
+}
+
+.quick-quote-link:hover {
+    background: var(--accent-secondary-dark) !important;
+    color: white;
 }
 
 .current-menu-item>a,

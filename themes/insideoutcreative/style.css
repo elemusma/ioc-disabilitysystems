@@ -13,12 +13,12 @@ Version: 1.0
     --secondary: #0f2849;
 }
 
-.logged-in header.position-fixed {
+.logged-in .nav.position-fixed {
     margin-top: 32px;
 }
 
 @media only screen and (max-width:767px) {
-    .logged-in header.position-fixed {
+    .logged-in .nav.position-fixed {
         margin-top: 45px;
     }
 }

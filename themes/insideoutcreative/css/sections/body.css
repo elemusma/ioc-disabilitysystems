@@ -1,6 +1,7 @@
 :root {
   --accent-primary: #ffa900;
-  --accent-secondary: #182236;
+  --accent-secondary: #3f7cdf;
+  --accent-secondary-dark: #002d89;
 }
 
 html {
