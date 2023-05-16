@@ -1,0 +1,12 @@
+@media only screen and (min-width:992px) {
+
+    .col-relationship:nth-child(1),
+    .col-relationship:nth-child(2),
+    .col-relationship:nth-child(3) {
+        margin-top: -130px;
+    }
+}
+
+.col-relationship:hover .col-relationship-overlay {
+    opacity: 0 !important;
+}

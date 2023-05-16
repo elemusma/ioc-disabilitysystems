@@ -13,7 +13,7 @@ wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
 wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
 
 // if(is_front_page()){
-	wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
+	wp_enqueue_style('content', get_theme_file_uri('/css/sections/content.css'));
 // }
 // if(is_page_template('templates/about.php')){
 // 	wp_enqueue_style('about-custom', get_theme_file_uri('/css/sections/about.css'));
@@ -27,9 +27,9 @@ wp_enqueue_style('blog', get_theme_file_uri('/css/sections/blog.css'));
 }
 
 wp_enqueue_style('photo-gallery', get_theme_file_uri('/css/sections/photo-gallery.css'));
-// wp_enqueue_style('footer', get_theme_file_uri('/css/sections/footer.css'));
+wp_enqueue_style('footer', get_theme_file_uri('/css/sections/footer.css'));
 // wp_enqueue_style('sidebar', get_theme_file_uri('/css/sections/sidebar.css'));
-// wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
+wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
 wp_enqueue_style('btn', get_theme_file_uri('/css/elements/btn.css'));
 // fonts
 wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));

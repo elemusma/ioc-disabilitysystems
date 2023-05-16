@@ -2,6 +2,7 @@
   --accent-primary: #ffa900;
   --accent-secondary: #3f7cdf;
   --accent-secondary-dark: #002d89;
+  --text-shadow: 1px 1px 3px black;
 }
 
 html {

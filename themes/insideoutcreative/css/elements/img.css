@@ -37,7 +37,7 @@ img.img-si {
     position: relative;
 }
 
-.img-hover:after {
+.img-hover.icon:after {
     content: "+";
     position: absolute;
     width: 40px;
