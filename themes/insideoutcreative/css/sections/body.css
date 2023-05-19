@@ -39,6 +39,10 @@ a.bg-accent:hover {
   background: var(--accent-secondary);
 }
 
+.bg-accent-secondary-dark {
+  background: var(--accent-secondary-dark);
+}
+
 a.bg-accent-secondary:hover {
   background: var(--accent-primary);
 }
@@ -139,14 +143,6 @@ hr.text-white {
 
 .w-auto {
   width: auto;
-}
-
-.overlay {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.35);
 }
 
 .divider {

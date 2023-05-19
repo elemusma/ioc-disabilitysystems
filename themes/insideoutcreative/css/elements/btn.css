@@ -13,3 +13,27 @@
     background: var(--accent-primary);
     text-decoration: none;
 }
+
+.btn-secondary {
+    background: var(--accent-primary);
+    color: var(--accent-secondary-dark);
+    text-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-secondary);
+    color: white;
+}
+
+.btn-main.outline {
+    background: white;
+    border: 2px solid var(--accent-primary);
+    color: var(--accent-primary);
+    text-shadow: none;
+}
+
+.btn-main.outline:hover {
+    background: var(--accent-primary);
+    border: 2px solid var(--accent-primary);
+    color: white;
+}

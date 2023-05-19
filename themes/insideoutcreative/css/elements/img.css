@@ -1,7 +1,3 @@
-img[class*="wp-image"] {
-    max-width: 100%;
-}
-
 .img-border {
     border: 4px solid white;
 }
@@ -85,6 +81,14 @@ img.img-si {
 .img-hover:hover img,
 img.img-hover:hover {
     transform: scale(1.1);
+}
+
+.img-hover .overlay {
+    transition: all .25s ease-in-out;
+}
+
+.img-hover:hover .overlay {
+    opacity: 0 !important;
 }
 
 .img-hover:hover:after {

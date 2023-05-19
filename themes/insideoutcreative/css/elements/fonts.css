@@ -8,6 +8,26 @@ h2,
   font-size: 3vw;
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.small {
+  font-size: 80%;
+}
+
 .text-white *,
 .text-white {
   color: white;
@@ -17,6 +37,7 @@ h2,
   color: white;
 }
 
+ul.menu>li>a.text-accent,
 .text-accent,
 a {
   color: var(--accent-primary);
@@ -122,6 +143,10 @@ blockquote {
 
 .blair-itc-light {
   font-family: 'blairitc_ttlight';
+}
+
+.blair-itc {
+  font-family: 'blair_itc_mediumregular';
 }
 
 /* 

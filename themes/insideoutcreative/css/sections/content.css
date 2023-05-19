@@ -1,3 +1,4 @@
+/* start of relationship */
 @media only screen and (min-width:992px) {
 
     .col-relationship:nth-child(1),
@@ -7,6 +8,20 @@
     }
 }
 
-.col-relationship:hover .col-relationship-overlay {
+.col-relationship-link:hover .col-relationship-overlay {
     opacity: 0 !important;
 }
+
+/* end of relationship */
+
+/* start of tabs */
+.col-tabs {
+    transition: all .25s ease-in-out;
+}
+
+.col-tabs:hover {
+    background: var(--accent-primary) !important;
+    color: white !important;
+}
+
+/* end of tabs */

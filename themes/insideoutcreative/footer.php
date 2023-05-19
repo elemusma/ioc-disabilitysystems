@@ -1,9 +1,9 @@
 <?php
 echo '<footer>';
-echo '<section class="pt-5">';
+echo '<section class="" style="padding-top: 25px;">';
 echo '<div class="container">';
 echo '<div class="row justify-content-center align-items-center">';
-echo '<div class="col-lg-3 text-center pb-5">';
+echo '<div class="col-lg-3 col-md-8 text-center pb-5">';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options'); 

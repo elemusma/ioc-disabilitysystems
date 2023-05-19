@@ -6,7 +6,7 @@ if(have_rows('background_image')): while(have_rows('background_image')): the_row
     if($image){
         echo wp_get_attachment_image($image['id'],'full','',[
             'class'=>'w-100 h-100 position-absolute' . get_sub_field('image_classes'),
-            'style'=>'top:0;left:0;object-fit:cover;pointer-events:none;' . get_sub_field('image_style')
+            'style'=>'top:0;left:0;object-fit:cover;object-position:top right;pointer-events:none;' . get_sub_field('image_style')
         ]);
     }
 

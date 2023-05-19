@@ -2,6 +2,8 @@
 global $post; 
 if ( ! post_password_required( $post ) ) {
 
+    
+
 if(get_the_content()){
 
 echo '<section class="pt-5 pb-5">';
@@ -19,6 +21,8 @@ echo '</div>';
 echo '</section>';
 
 }
+
+echo get_template_part('partials/content');
 
 } else {
 // we will show password form here
