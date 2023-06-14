@@ -1,7 +1,7 @@
 :root {
   --accent-primary: #ffa900;
-  --accent-secondary: #3f7cdf;
-  --accent-secondary-dark: #002d89;
+  --accent-secondary: #4D78BC;
+  --accent-secondary-dark: #325285;
   --text-shadow: 1px 1px 3px black;
 }
 
@@ -47,36 +47,8 @@ a.bg-accent-secondary:hover {
   background: var(--accent-primary);
 }
 
-.bg-accent-green {
-  background: #22ae07;
-}
-
-.bg-accent-gold {
-  background: #e2c391;
-}
-
-.bg-gray {
-  background: #adadad;
-}
-
-.bg-gray-1 {
-  background: #595959;
-}
-
-.bg-gray-light {
-  background: #f7f7f7;
-}
-
-.bg-gray-2 {
-  background: #262626;
-}
-
-.bg-white-soft {
-  background: #f0f0f0;
-}
-
-.bg-white-soft-1 {
-  background: #d9d9d9;
+.bg-white {
+  background: white;
 }
 
 .bg-black {

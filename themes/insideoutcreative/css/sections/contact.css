@@ -24,14 +24,14 @@ textarea {
   border: none;
 }
 
-input[type=file] {
+input[type="file"] {
   background: transparent;
-  box-shadow: none;
+  box-shadow: none !important;
   border: none;
 }
 
 /* custom form */
-input,
+/* input,
 textarea {
   width: 100%;
   border: 1px solid #eaeaea;
@@ -59,7 +59,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background: var(--accent-secondary);
-}
+} */
 
 input:focus-visible,
 textarea:focus-visible {
@@ -68,6 +68,5 @@ textarea:focus-visible {
 
 input::placeholder,
 textarea::placeholder {
-  /* color: red; */
   font-weight: 900;
 }

@@ -31,7 +31,7 @@ echo '<div class="box-shadow" style="background:white;">';
 echo '<div class="container-fluid">';
 echo '<div class="row align-items-center">';
 
-echo '<div class="col-md-4 col-6 text-center">';
+echo '<div class="col-lg-3 col-12 text-center">';
 echo '<a href="' . home_url() . '" aria-label="home link">';
 
 $logo = get_field('logo','options'); 
@@ -45,17 +45,52 @@ echo wp_get_attachment_image($logo['id'],'full',"",[
 echo '</a>';
 echo '</div>';
 
-echo '<div class="col-lg-4 col-6 mobile-hidden">';
+echo '<div class="col-7 mobile-hidden">';
 
-wp_nav_menu(array(
-    'menu' => 'primary',
-    'menu_class'=>'menu d-flex list-unstyled justify-content-center'
-));
+// wp_nav_menu(array(
+//     'menu' => 'primary',
+//     'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center'
+// ));
+
+echo '<div class="row justify-content-center">';
+
+echo '<div class="col-lg-3 text-center" style="margin-bottom:15px;">';
+    echo '<a href="' . home_url() . '/" style="color:#737272;text-decoration:none;">Home</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="margin-bottom:15px;">';
+    echo '<a href="' . home_url() . '/commercial-ramps/" style="color:#737272;text-decoration:none;">Commercial Ramps/Stairs</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="margin-bottom:15px;">';
+    echo '<a href="' . home_url() . '/door-controls/" style="color:#737272;text-decoration:none;">Door Controls</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="margin-bottom:15px;">';
+    echo '<a href="' . home_url() . '/door-openers/" style="color:#737272;text-decoration:none;">Door Openers</a>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="">';
+    echo '<a href="' . home_url() . '/portable-ramps/" style="color:#737272;text-decoration:none;">Portable Ramps</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="">';
+    echo '<a href="' . home_url() . '/resources/" style="color:#737272;text-decoration:none;">Resources</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="">';
+    echo '<a href="' . home_url() . '/modular-ramps/" style="color:#737272;text-decoration:none;">Modular Ramps</a>';
+    echo '<div class="position-absolute bg-accent-secondary h-100" style="width:1px;top:0;right:0;"></div>';
+echo '</div>';
+echo '<div class="col-lg-3 text-center" style="">';
+    echo '<a href="' . home_url() . '/contact/" style="color:#737272;text-decoration:none;">Contact</a>';
+echo '</div>';
+
+echo '</div>';
 
 
 echo '</div>';
 
-echo '<div class="col-md-4 col-6 desktop-hidden">';
+echo '<div class="col-4 desktop-hidden">';
 echo '<a id="navToggle" class="nav-toggle">';
 echo '<div>';
 echo '<div class="line-1 bg-accent"></div>';
@@ -65,22 +100,33 @@ echo '</div>';
 echo '</a>';
 echo '</div>';
 
-echo '<div class="col-md-4 col-12 d-flex align-items-center justify-content-end">';
+echo '<div class="col-lg-2 col-8 d-flex align-items-center justify-content-end">';
 
-echo '<a style="width:35px;margin-right:15px;" class="cart-icon" href="https://store.disabilitysystems.com/view_cart.asp" target="_blank">';
-echo '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>';
-echo '</a>';
+echo get_template_part('partials/icon-shopping-cart');
 
-echo '<a href="' . home_url() . '/quick-quote" class="text-accent-secondary-dark bold quick-quote-link" style="
-transition:all .25s ease-in-out;
-text-decoration:none;
-background: var(--accent-primary);
-padding: 10px 55px;
-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
--ms-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
--moz-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
--webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
-">Quick Quote</a>';
+if(is_page(183) || is_page(98) || is_page(86)) {
+    echo '<a href="' . home_url() . '/quick-quote/" class="text-accent-secondary-dark bold quick-quote-link" style="
+    transition:all .25s ease-in-out;
+    text-decoration:none;
+    background: var(--accent-primary);
+    padding: 10px 35px;
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    ">Quick Quote</a>';
+} else {
+    echo '<a href="' . home_url() . '/contact/" class="text-accent-secondary-dark bold quick-quote-link" style="
+    transition:all .25s ease-in-out;
+    text-decoration:none;
+    background: var(--accent-primary);
+    padding: 10px 35px;
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -ms-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -moz-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+    ">Contact</a>';
+}
 
 echo '</div>';
 
@@ -92,7 +138,7 @@ echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-white desktop-hidden" id
 echo '<div class="pt-5 pb-5">';
 echo '<div class="close-menu">';
 echo '<div>';
-echo '<span id="navMenuClose" class="close h1">X</span>';
+echo '<span id="navMenuClose" class="close h2 text-gray" style="float:right;">X</span>';
 echo '</div>';
 echo '</div>';
 echo '<a href="' . home_url() . '">';
@@ -110,6 +156,10 @@ wp_nav_menu(array(
     'menu_class'=>'menu list-unstyled mb-0'
 ));
 
+echo '<div style="width:50px;">';
+echo get_template_part('partials/icon-shopping-cart');
+echo '</div>';
+
 echo '</div>'; // end of col for navigation
 
 
@@ -120,11 +170,11 @@ echo '</div>'; // end of primary nav
 
 // start of secondary nav
 
-wp_nav_menu(array(
-    'menu' => 'secondary',
-    'menu_class'=>'menu list-unstyled mb-0 d-flex justify-content-center flex-wrap',
-    'link_class' => 'text-accent bold'
-));
+// wp_nav_menu(array(
+//     'menu' => 'secondary',
+//     'menu_class'=>'menu list-unstyled mb-0 d-flex justify-content-center flex-wrap',
+//     'link_class' => 'text-accent bold'
+// ));
 
 // end of secondary nav
 

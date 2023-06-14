@@ -36,7 +36,7 @@ top: 65%;
 left: 0;
 transform: translate(0px, -50%);"></div>';
 
-echo '<div class="d-flex">';
+echo '<div class="d-flex flex-wrap">';
 
 echo '<span style="padding-right:25px;"><strong>Phone</strong>: <a href="tel:+' . get_field('phone','option') . '">' . get_field('phone','option') . '</a></span>';
 
