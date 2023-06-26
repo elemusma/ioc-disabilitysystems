@@ -25,3 +25,13 @@
 }
 
 /* end of tabs */
+
+/* start of body */
+table,
+td,
+th {
+    border: 1px solid #000970;
+    padding: 10px;
+}
+
+/* end of body */

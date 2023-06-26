@@ -281,3 +281,29 @@ function add_menu_link_class( $atts, $item, $args ) {
     return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 10, 3 );
+
+function redirect_relative_urls() {
+	if (is_admin()) {
+	  return;
+	}
+  
+	ob_start('rewrite_relative_urls');
+  }
+  
+function rewrite_relative_urls($content) {
+$base_url = home_url('/');
+
+// Regex pattern to match relative URLs
+$pattern = '/(href|src)=["\'](?!http|\/\/)([^"\']+)[\'"]/i';
+
+// Replace relative URLs with absolute URLs
+$content = preg_replace_callback($pattern, function ($matches) use ($base_url) {
+	$relative_url = $matches[2];
+	$absolute_url = $base_url . ltrim($relative_url, '/');
+	return $matches[1] . '="' . $absolute_url . '"';
+}, $content);
+
+return $content;
+}
+
+add_action('template_redirect', 'redirect_relative_urls');

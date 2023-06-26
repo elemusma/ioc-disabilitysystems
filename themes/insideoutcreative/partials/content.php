@@ -132,6 +132,10 @@ if(have_rows('gallery_repeater')):
     while(have_rows('gallery_repeater')): the_row();
     $galleryCounter++;
     $gallery = get_sub_field('gallery');
+
+    $clickAction = get_sub_field('click_action');
+
+
     
     if($galleryCounter == 1){
     echo '<div class="col-md-8 mb-md-0 mb-4 position-relative" style="margin: 15px 0;">';
@@ -141,7 +145,19 @@ if(have_rows('gallery_repeater')):
     if($gallery):
         echo '<div class="projects-carousel owl-carousel owl-theme arrows-middle">';
         foreach($gallery as $image):
-    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter . '" class="d-block position-relative overflow-h">';
+
+    
+    if($clickAction == 'Lightbox') {
+        echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter . '" class="d-block position-relative overflow-h">';
+    } elseif($clickAction == 'Link') {
+        $link = get_sub_field('link');
+
+        $link_url = $link['url'];
+        $link_title = $link['title'];
+        $link_target = $link['target'] ? $link['target'] : '_self';
+
+        echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">';
+    }
     
     
     
@@ -179,6 +195,8 @@ if(have_rows('gallery_repeater')):
     while(have_rows('gallery_repeater')): the_row();
     $galleryCounter2++;
     $gallery = get_sub_field('gallery');
+
+    $clickAction = get_sub_field('click_action');
     
     if($galleryCounter2 > 1 && $galleryCounter2 < 4){
     // echo '<div class="col-md-8 mb-md-0 mb-4">';
@@ -188,7 +206,18 @@ if(have_rows('gallery_repeater')):
 
         echo '<div class="projects-carousel owl-carousel owl-theme arrows-middle">';
         foreach($gallery as $image):
+
+    if($clickAction == 'Lightbox') {
     echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter2 . '" class="d-block position-relative overflow-h">';
+} elseif($clickAction == 'Link') {
+    $link = get_sub_field('link');
+
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+
+    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">';
+}
     
     
     echo '<div class="position-relative img-hover w-100">';
@@ -229,6 +258,8 @@ if(have_rows('gallery_repeater')):
     while(have_rows('gallery_repeater')): the_row();
     $galleryCounter3++;
     $gallery = get_sub_field('gallery');
+
+    $clickAction = get_sub_field('click_action');
     
     if($galleryCounter3 > 3){
     echo '<div class="col-md-4 mt-4 position-relative" style="margin: 15px 0;">';
@@ -236,7 +267,18 @@ if(have_rows('gallery_repeater')):
     if($gallery):
         echo '<div class="projects-carousel owl-carousel owl-theme arrows-middle">';
         foreach($gallery as $image):
-    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter3 . '" class="d-block position-relative overflow-h">';
+
+    if($clickAction == 'Lightbox') {
+    echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-set-' . $galleryCounter . '" class="d-block position-relative overflow-h">';
+} elseif($clickAction == 'Link') {
+    $link = get_sub_field('link');
+
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+
+    echo '<a class="" href="' . esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">';
+}
     
     echo '<div class="position-absolute w-100 z-1 d-flex h-100 justify-content-center align-items-center" style="transform:translate(0px, 0px);pointer-events:none;">';
     echo '<span class="text-white bold text-shadow" style="white-space:nowrap;font-size:1.5rem;">' . get_sub_field('title') . '</span>';
